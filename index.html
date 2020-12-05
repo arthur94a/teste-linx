@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>LINX TESTE</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <header class="custom-header">
+    <!----------------------------------Títulos-------------------------------->
+        <div class="titulo-div">
+            <h2 class="titulo-h2">uma seleção de produtos</h2>
+            <h1 class="titulo-h1">especial para você</h1>
+            <h4 class="titulo-h4">Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</h4>
+        </div>
+    <!-----------------------------Aba de navegação----------------------------->
+        <div class="list">
+            <div class="flex-section-list">
+                <div class="flex-section-divisao-up">
+                    <div><a class="list-a1" href="https://www.linx.com.br/quem-somos/" target="_blank">Conheça a Linx</a></div>
+                    <div><a class="list-a2" href="#section-algoritmo">Ajude o algoritmo</a></div>
+                </div>   
+                <div class="flex-section-divisao-down">    
+                    <div><a class="list-a3" href="#selecao-especial">Seus produtos</a></div>
+                    <div><a class="list-a4" href="#compartilhe">Compartilhe</a></div>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    
+    <main>
+    <!----------------------------Formulário + Texto------------------------------->
+    
+    <section class="flex-section" id="section-algoritmo">
+        <!-------------------------------------------------------Texto-->
+        <div class="sub-titulo">
+
+
+                <h2>Ajude o algoritmo a ser mais certeiro</h2>
+
+                    </br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi
+                    porta convallis sollicitudin eu urna. Mauris rhoncus erat sed interdum dignissim.
+                    Suspendisse semper pretium consectetur. Praesent bibendum arcu risus,
+                    sit amet iaculis ex tempus quis. Cras et erat ut tellus vulputate tincidunt.
+                    Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora
+                    torquent per conubia nostra, per inceptos himenaeos.
+                    Vestibulum vel urna tortor. Vivamus et arcu non felis tristique eleifend.
+                <br><br>
+                    Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices.
+                    Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat.
+                    Etiam ultricies a ante vehicula pharetra. Quisque ut neque mattis, consequat velit ut, ultrices orci.
+                    Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. Morbi viverra, magna ac luctus commodo,
+                    odio ante suscipit libero, at mattis augue est vel metus.
+                    </p>
+        </div>
+        <!-----------------------------------------------------Formulário FeedBack-->
+        <div>
+            <form>
+                <div class="form-div">
+                    <div class="form-div-int"> <!--Nome-->
+                        <label for="amigoNome">Seu nome:<br></label>
+                        <input class="form-div-input" type="text" id="amigoNome" name="amigoNome">
+                    </div>
+                    <div>
+                        <label for="amigoNome">E-mail<br></label> <!--Email-->
+                        <input class="form-div-input" type="text" id="amigoNome" name="amigoNome">
+                    </div>
+                    <div>
+                        <label for="amigoNome">CPF:<br></label> <!--CPF-->
+                        <input class="form-div-input" type="text" id="amigoNome" name="amigoNome">
+                    </div>
+                    <div class="form-div-radio"> <!--Sexo-->
+                        <input type="radio" name="sex" value="male"> Masculino</input>
+                        <input type="radio" name="sex" value="female"> Feminino</input>
+                    </div>
+                </div>
+                    <button class="form-button1">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <!-----------------------------------------Divisória Vitrine---------------------------------------->
+        <div class="divisao-h2" id="selecao-especial">
+            <div class="flex-section-divisao" >
+        
+                <div class="divisao-linha"><hr></div>
+                
+                <div class="divisao-h2"><h2>Sua seleção especial</h2></div>
+               
+                <div class="divisao-linha"><hr></div>
+            </div>
+    
+        </div>
+        
+    <!--------------------------------------------Vitrine----------------------------------------------->
+    <section class="products" id="products"></section>
+    <div id="topo"></div>
+    <div>
+        <button class="more-prod-button" id="load-more-products">Ainda mais produtos aqui!</button>
+    </div>
+
+
+    <!----------------------------------Divisória Compartilhamento----------------------------------------->
+        <div class="divisao-h2" id="compartilhe">
+
+            <div class="flex-section-divisao-down" >
+        
+                <div class="divisao-linha"><hr></div>
+               
+                <div class="divisao-h2"><h2>Compartilhe a novidade</h2></div>
+               
+                <div class="divisao-linha"><hr></div>
+            </div>
+    
+                <p class="p-share">Quer que seus amigos também ganhem a lista customalizada deles? Preencha agora!</p>
+        </div>
+
+    <!-------------------------------------Compartilhamento------------------------------------------------->
+    
+    
+    <section id="share">
+        <form class="flex-section-divisao2" >
+            <div class="sec-1">
+                <div><label for="amigoNome">Nome do seu amigo:</label></div>
+
+                <div class="sec-1a"><input class="form-div-input" type="text" id="amigoNome" name="amigoNome"/></div>
+            </div>
+            <div>
+                <div><label for="email">E-mail:</label></div>
+
+                <div><input class="form-div-input" type="email" id="email" name="email"/></div>
+            </div>
+        </form>
+        <button class="send-now-button">Enviar agora</button>
+    </section>
+    </main>
+
+    <!----------------------------------------Rodapé--------------------------------------------------------->
+    <footer class="custom-footer">
+        
+        <p>Testando suas habilidades em HTML, CSS e JS.<br> Linx Impulse<br> 2020</p>
+    </footer>
+
+    <script src='main.js'></script>
+    
+    
+
+   
+
+</body>
+</html>
