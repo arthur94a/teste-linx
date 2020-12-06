@@ -1,65 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-
-.list a{
-  color: #888888;
-  text-decoration-line: none;
-  border: 1px solid #707070;
-  border-radius: 4px;
-}
-
-.list a:hover{
-  color: white;
-  background-color: #707070;
-
-}
-
-.flex-section-list{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  padding: 30px;
-
-}
-
-.flex-section-divisao-up{
-  display: flex;
-  flex-direction: row;
-  margin-right: 15px;
-}
-
-.list-a1{
-  padding-block: 10px;
-  padding-inline: 27px;
-  background-color: white;
-}
-
-.list-a2{
-  padding-block: 10px;
-  padding-inline: 15px;
-  background-color: white;
-  margin-left: 15px;
-}
-
-.list-a3{
-  padding-block: 10px;
-  padding-inline: 30px;
-  background-color: white;
-}
-
-.list-a4{
-  padding-block: 10px;
-  padding-inline: 37px;
-  background-color: white;
-  margin-left: 15px;
-}
-
-
-
-
-
-
 /*RESET*/
 /* Box sizing rules */
 *,
@@ -213,6 +153,62 @@ p {
   margin-top: 230px;
 }
 
+.list a{
+  color: #888888;
+  text-decoration-line: none;
+  border: 1px solid #707070;
+  border-radius: 4px;
+}
+
+.list a:hover{
+  color: white;
+  background-color: #707070;
+
+}
+
+.flex-section-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  padding: 30px;
+
+}
+
+.flex-section-divisao-up{
+  display: flex;
+  flex-direction: row;
+  margin-right: 15px;
+}
+
+/*----List-a: Ajusta o tamanho dos botões de navegação----*/
+.list-a1{
+  padding-block: 10px;
+  padding-inline: 24.8px;
+  background-color: white;
+}
+
+.list-a2{
+  padding-block: 10px;
+  padding-inline: 16.02px;
+  background-color: white;
+  margin-left: 15px;
+}
+
+.list-a3{
+  padding-block: 10px;
+  padding-inline: 27.7px;
+  background-color: white;
+}
+
+.list-a4{
+  padding-block: 10px;
+  padding-inline: 35.35px;
+  background-color: white;
+  margin-left: 15px;
+}
+
+
 /*--------------------------Formulário--------------------*/
 .sub-titulo {
     text-align: left;
@@ -308,6 +304,7 @@ form {
   width: 201px;
   height: 350px;
   margin-bottom: 40px;
+ 
 }
 
 .products-img {
@@ -453,14 +450,17 @@ button:hover{
 ====================================================================================================*/
 @media only screen and (max-width: 768px) {
 
-div{
-  border: red;
+
+main {
+    max-width: none;
+    margin: 0 auto;
 }
 
 /*--------Altera o flex para divs ficarem abaixo ao invés do lado.*/
 .flex-section{
   flex-direction: column;
   margin-left: 3.8%;
+  margin-right: 32px;
   
 }
 
@@ -500,13 +500,13 @@ div{
 
 .form-div {
   float: none;
-  width: 95.72%; /* 100% - 4.28% da borda */
+  width: 100%; /* 100% - 4.28% da borda */
 }
 
 
 .form-button1 {
   float: none;
-  width: 95.72%; /* 100% - 4.28% da borda */
+  width: 100%;
 }
 /*-------Vitrine-------------------*/
 .products {
@@ -519,8 +519,11 @@ div{
     margin-bottom: 40px;
     display: flex;
     flex-direction: row;
+    padding-inline: 5%;
 }
-
+.products-item-justResponsive{
+  padding-left: 30px;
+}
 
 /*-------Botões Regulagem----------*/
 .send-now-button {

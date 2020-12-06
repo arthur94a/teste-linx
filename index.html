@@ -59,26 +59,28 @@
         </div>
         <!-----------------------------------------------------Formulário FeedBack-->
         <div>
-            <form>
+            <form name="f1">
                 <div class="form-div">
                     <div class="form-div-int"> <!--Nome-->
-                        <label for="amigoNome">Seu nome:<br></label>
-                        <input class="form-div-input" type="text" id="amigoNome" name="amigoNome">
+                        <label for="name">Seu nome:<br></label>
+                        <input class="form-div-input" type="text" id="name" name="nome">
                     </div>
                     <div>
-                        <label for="amigoNome">E-mail<br></label> <!--Email-->
-                        <input class="form-div-input" type="text" id="amigoNome" name="amigoNome">
-                    </div>
+                        <label for="email">E-mail<br></label> <!--Email-->
+                        <input class="form-div-input" type="text" name="email> 
+                    </div><div id="msgemail"></div>
                     <div>
-                        <label for="amigoNome">CPF:<br></label> <!--CPF-->
-                        <input class="form-div-input" type="text" id="amigoNome" name="amigoNome">
+                        <label for="cpf">CPF:<br></label> <!--CPF-->
+                        <input class="form-div-input" type="text" name="cpf" \
+                                            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \
+                                            title="Digite um CPF no formato: xxx.xxx.xxx-xx">
                     </div>
                     <div class="form-div-radio"> <!--Sexo-->
                         <input type="radio" name="sex" value="male"> Masculino</input>
                         <input type="radio" name="sex" value="female"> Feminino</input>
                     </div>
                 </div>
-                    <button class="form-button1">Enviar</button>
+                    <button type="submit" class="form-button1"  onclick="validacaoEmail(f1.email)">Enviar</button>
             </form>
         </div>
     </section>
@@ -122,19 +124,18 @@
     
     
     <section id="share">
-        <form class="flex-section-divisao2" >
+        <form class="flex-section-divisao2" id="f2">
             <div class="sec-1">
                 <div><label for="amigoNome">Nome do seu amigo:</label></div>
 
                 <div class="sec-1a"><input class="form-div-input" type="text" id="amigoNome" name="amigoNome"/></div>
             </div>
             <div>
-                <div><label for="email">E-mail:</label></div>
-
-                <div><input class="form-div-input" type="email" id="email" name="email"/></div>
+                <div id="msgemail2"><label for="email">E-mail:</label></div>            
+                <div id="msgemail2"><input class="form-div-input" type="email" name="email2" onblur="validacaoEmail2(f2.email2)"/></div>
             </div>
         </form>
-        <button class="send-now-button">Enviar agora</button>
+        <button type="submit" class="send-now-button">Enviar agora</button>
     </section>
     </main>
 

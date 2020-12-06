@@ -12,7 +12,7 @@ function loadProducts(url) {
     <div>
           <img class="products-img" src="http:${prd.image}" />
     </div>
-    <div>      
+    <div class="products-item-justResponsive">      
           <p class="product-name">${prd.name}</p>
           <p class="product-description">${prd.description}</p>
           <p class="product-old-price">De: R$${prd.oldPrice.toFixed(2)}</p> 
@@ -37,6 +37,45 @@ function loadProducts(url) {
   });
 }
 
+//Validação do email--------------------------------------------------------------
+function validacaoEmail(field) {
+  usuario = field.value.substring(0, field.value.indexOf("@"));
+  dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
+  
+  if ((usuario.length >=1) &&
+      (dominio.length >=3) &&
+      (usuario.search("@")==-1) &&
+      (dominio.search("@")==-1) &&
+      (usuario.search(" ")==-1) &&
+      (dominio.search(" ")==-1) &&
+      (dominio.search(".")!=-1) &&
+      (dominio.indexOf(".") >=1)&&
+      (dominio.lastIndexOf(".") < dominio.length - 1)) {
+  document.getElementById("msgemail").innerHTML="E-mail válido";
+  }
+  else{
+  document.getElementById("msgemail").innerHTML="<font color='red'>E-mail inválido </font>";
+  }
+  }
 
+  function validacaoEmail2(field) {
+    usuario = field.value.substring(0, field.value.indexOf("@"));
+    dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
+    
+    if ((usuario.length >=1) &&
+        (dominio.length >=3) &&
+        (usuario.search("@")==-1) &&
+        (dominio.search("@")==-1) &&
+        (usuario.search(" ")==-1) &&
+        (dominio.search(" ")==-1) &&
+        (dominio.search(".")!=-1) &&
+        (dominio.indexOf(".") >=1)&&
+        (dominio.lastIndexOf(".") < dominio.length - 1)) {
+    document.getElementById("msgemail2").innerHTML="E-mail válido";
+    }
+    else{
+    document.getElementById("msgemail2").innerHTML="<font color='red'>E-mail: inválido </font>";
+    }
+    }
 
   window.onload = loadProducts(apiUrl);
