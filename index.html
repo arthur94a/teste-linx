@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -7,36 +8,43 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
+
 <body>
+    
     <header class="custom-header">
-    <!----------------------------------Títulos-------------------------------->
-        <div class="titulo-div">
-            <h2 class="titulo-h2">uma seleção de produtos</h2>
-            <h1 class="titulo-h1">especial para você</h1>
-            <h4 class="titulo-h4">Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</h4>
+    <!----------------------------------Titles-------------------------------->
+        <div class="title-div">
+            <h2 class="title-h2">uma seleção de produtos</h2>
+            <h1 class="title-h1">especial para você</h1>
+            <h4 class="title-h4">Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</h4>
         </div>
-    <!-----------------------------Aba de navegação----------------------------->
+    <!-----------------------------Navigation Tap----------------------------->
         <div class="list">
+            
             <div class="flex-section-list">
-                <div class="flex-section-divisao-up">
+                
+                <div class="flex-section-division-up">
                     <div><a class="list-a1" href="https://www.linx.com.br/quem-somos/" target="_blank">Conheça a Linx</a></div>
                     <div><a class="list-a2" href="#section-algoritmo">Ajude o algoritmo</a></div>
                 </div>   
-                <div class="flex-section-divisao-down">    
+                
+                <div class="flex-section-division-down">    
                     <div><a class="list-a3" href="#selecao-especial">Seus produtos</a></div>
                     <div><a class="list-a4" href="#compartilhe">Compartilhe</a></div>
                 </div>
+            
             </div>
+        
         </div>
         
     </header>
     
     <main>
-    <!----------------------------Formulário + Texto------------------------------->
-    
+    <!----------------------------Form + Txt-------------------------------->
+     
     <section class="flex-section" id="section-algoritmo">
-        <!-------------------------------------------------------Texto-->
-        <div class="sub-titulo">
+        <!-----------------------------------------------------------Texto-->
+        <div class="sub-title">
 
 
                 <h2>Ajude o algoritmo a ser mais certeiro</h2>
@@ -49,102 +57,130 @@
                     Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora
                     torquent per conubia nostra, per inceptos himenaeos.
                     Vestibulum vel urna tortor. Vivamus et arcu non felis tristique eleifend.
-                <br><br>
+                    <br><br>
                     Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices.
                     Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat.
                     Etiam ultricies a ante vehicula pharetra. Quisque ut neque mattis, consequat velit ut, ultrices orci.
                     Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. Morbi viverra, magna ac luctus commodo,
                     odio ante suscipit libero, at mattis augue est vel metus.
                     </p>
+       
         </div>
-        <!-----------------------------------------------------Formulário FeedBack-->
+        <!-----------------------------------------------------Form FeedBack-->
         <div>
+            
             <form name="f1">
+                
                 <div class="form-div">
-                    <div class="form-div-int"> <!--Nome-->
+                    
+                    <div class="form-div-int"><!--Name-->
                         <label for="name">Seu nome:<br></label>
                         <input class="form-div-input" type="text" id="name" name="nome">
                     </div>
-                    <div>
-                        <label for="email">E-mail<br></label> <!--Email-->
-                        <input class="form-div-input" type="text" name="email> 
+                    
+                    <div><!--Email-->
+                        <label for="email">E-mail<br></label> 
+                        <input class="form-div-input" type="text" name="email" onblur="emailValidation(f1.email)"> 
                     </div><div id="msgemail"></div>
-                    <div>
-                        <label for="cpf">CPF:<br></label> <!--CPF-->
-                        <input class="form-div-input" type="text" name="cpf" \
-                                            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \
-                                            title="Digite um CPF no formato: xxx.xxx.xxx-xx">
+                    
+                    <div><!--CPF-->
+                        <label for="cpf">CPF:<br></label> 
+                        <input class="form-div-input" type="text" name="cpf" \ pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \ title="Digite um CPF no formato: xxx.xxx.xxx-xx">
                     </div>
-                    <div class="form-div-radio"> <!--Sexo-->
+                    
+                    <div class="form-div-radio"><!--Sex-->
                         <input type="radio" name="sex" value="male"> Masculino</input>
                         <input type="radio" name="sex" value="female"> Feminino</input>
                     </div>
+                
                 </div>
-                    <button type="submit" class="form-button1"  onclick="validacaoEmail(f1.email)">Enviar</button>
+                    
+                    <button type="submit" class="form-button1">Enviar</button>
+            
             </form>
+        
         </div>
     </section>
-    <!-----------------------------------------Divisória Vitrine---------------------------------------->
-        <div class="divisao-h2" id="selecao-especial">
-            <div class="flex-section-divisao" >
+    <!----------------------------Showcase Division------------------------->
+    <div class="division-h2" id="selecao-especial">
+            
+            <div class="flex-section-division" >
         
-                <div class="divisao-linha"><hr></div>
-                
-                <div class="divisao-h2"><h2>Sua seleção especial</h2></div>
-               
-                <div class="divisao-linha"><hr></div>
+                <div class="division-line"><hr></div>                
+                <div class="division-h2"><h2>Sua seleção especial</h2></div>               
+                <div class="division-line"><hr></div>
+            
             </div>
     
-        </div>
+    </div>
         
-    <!--------------------------------------------Vitrine----------------------------------------------->
+    <!----------------------------Showcase---------------------------------->
     <section class="products" id="products"></section>
     <div id="topo"></div>
+    
     <div>
         <button class="more-prod-button" id="load-more-products">Ainda mais produtos aqui!</button>
     </div>
 
 
-    <!----------------------------------Divisória Compartilhamento----------------------------------------->
-        <div class="divisao-h2" id="compartilhe">
+    <!----------------------------Share's Division------------------------>
+    <div class="division-h2" id="compartilhe">
 
-            <div class="flex-section-divisao-down" >
+            <div class="flex-section-division-down" >
         
-                <div class="divisao-linha"><hr></div>
-               
-                <div class="divisao-h2"><h2>Compartilhe a novidade</h2></div>
-               
-                <div class="divisao-linha"><hr></div>
+                <div class="division-line"><hr></div>               
+                <div class="division-h2"><h2>Compartilhe a novidade</h2></div>              
+                <div class="division-line"><hr></div>
+            
             </div>
     
                 <p class="p-share">Quer que seus amigos também ganhem a lista customalizada deles? Preencha agora!</p>
-        </div>
+    
+    </div>
 
-    <!-------------------------------------Compartilhamento------------------------------------------------->
+    <!----------------------------Share----------------------------------->
     
     
     <section id="share">
-        <form class="flex-section-divisao2" id="f2">
+    
+        <form class="flex-section-division2" id="f2">
+            
             <div class="sec-1">
-                <div><label for="amigoNome">Nome do seu amigo:</label></div>
+                <div><label for="friendName">Nome do seu amigo:</label></div>
 
-                <div class="sec-1a"><input class="form-div-input" type="text" id="amigoNome" name="amigoNome"/></div>
+                <div class="sec-1a"><input class="form-div-input" type="text" id="friendName" name="friendName"/></div>
             </div>
+            
             <div>
                 <div id="msgemail2"><label for="email">E-mail:</label></div>            
-                <div id="msgemail2"><input class="form-div-input" type="email" name="email2" onblur="validacaoEmail2(f2.email2)"/></div>
+                <div id="msgemail2"><input class="form-div-input" type="email" name="email2" onblur="emailValidation2(f2.email2)"/></div>
             </div>
+        
         </form>
+        
         <button type="submit" class="send-now-button">Enviar agora</button>
+    
     </section>
+   
     </main>
 
-    <!----------------------------------------Rodapé--------------------------------------------------------->
+    
+    
+    
     <footer class="custom-footer">
         
         <p>Testando suas habilidades em HTML, CSS e JS.<br> Linx Impulse<br> 2020</p>
+    
     </footer>
 
+    
+    
+    
+    
+    
+    
+    
+    
     <script src='main.js'></script>
     
     
