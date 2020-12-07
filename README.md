@@ -32,8 +32,9 @@
 ---
 ## RUNNING
 
+Deployed on "Vercel"
 
-site: https://ecommerce-linx.vercel.app/
+#### site: https://ecommerce-linx.vercel.app/
 #### email: https://ecommerce-linx.vercel.app/emailmarketing.html
 
 __
