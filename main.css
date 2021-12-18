@@ -253,6 +253,16 @@ p {
   justify-content: center;
 }
 
+.form-send {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .form-button1 {
   float: right;
   background: #FFFFFF 0% 0% no-repeat padding-box;
